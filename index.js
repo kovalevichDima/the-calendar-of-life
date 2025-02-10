@@ -152,13 +152,13 @@ function sendMorningGreeting() {
 
 // Запуск еженедельных уведомлений
 cron.schedule("0 9 * * 0", () => {
-    // Каждое воскресенье в 09:00
+    // Каждое воскресенье в 12:00
     console.log("Отправка уведомлений...");
     sendNotifications();
 });
 
 // Запуск утреннего приветствия
-cron.schedule("0 9 * * *", () => {
+cron.schedule("0 5 * * *", () => {
     // Каждый день в 09:00
     console.log("Отправка утреннего приветствия...");
     sendMorningGreeting();
